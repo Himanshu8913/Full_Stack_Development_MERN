@@ -6,6 +6,9 @@
 
 - README.md: This file. It provides an overview of the repository and guidelines on how to use it effectively.
 
+- Frontend_Development/
+
+- Backend_Development/
 
 - docs/: Documentation and tutorials on fullstack development.
 
