@@ -50,4 +50,19 @@ app.post("/signin", (req, res) => {
     }
 });
 
+app.get("/me", (req, res) => {
+    const token = req.headers.authorization;
+    const user = users.find(u => u.token === token);
+    console.log(user);
+    if(user) {
+        res.json({
+            username: user.username,
+        })
+    } else {
+        res.status(403).send({
+            message: "Invalid token"
+        })
+    }
+})
+
 app.listen(3000);
